@@ -134,7 +134,7 @@ img {
   border-radius: 2px;
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 1px;
 }
 .link-active {
   position: relative;
@@ -272,6 +272,8 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background-color var(--duration) var(--timing-function),
+    color var(--duration) var(--timing-function);
 }
 .team .social-link {
   background-color: #ffffff;
@@ -314,13 +316,8 @@ img {
   text-transform: uppercase;
   width: 100%;
   padding: 27px 27px;
-  overflow: auto;
-  transform: translateY(100%);
-  transition: transform var(--duration) var(--timing-function);
 }
-.work-items:hover .work-img-text {
-  transform: translateY(0);
-}
+
 /* ----------TEAM------------ */
 .team-list {
   display: flex;
@@ -410,8 +407,6 @@ img {
 .basement .social-link {
   background-color: rgba(255, 255, 255, 0.1);
   color: var(--hero-white-color);
-  transition: background-color var(--duration) var(--timing-function),
-    color var(--duration) var(--timing-function);
 }
 
 .social-link:hover,
@@ -547,6 +542,7 @@ img {
   transform: translateY(100%);
   transition: transform var(--duration) var(--timing-function);
 }
-.portfolio-item:hover .portfolio-img-text {
+.portfolio-link:hover .portfolio-img-text,
+.portfolio-link:focus .portfolio-img-text {
   transform: translateY(0);
 }
